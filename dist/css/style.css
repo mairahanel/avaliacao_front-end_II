@@ -1,0 +1,276 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    color: white;
+}
+
+.segunda-coluna {
+    animation: mudarBackground 5s infinite;
+}
+
+.meu-container {
+    width: 50%;
+}
+
+@keyframes mudarBackground {
+    0% {
+      background-color: #4682B4;
+    }
+    50% {
+      background-color: #6959CD;
+    }
+    100% {
+      background-color: #4682B4;
+    }
+  }
+
+.input-cadastro {
+    background: transparent;
+}
+
+.input-login {
+    background: transparent;
+}
+
+/*main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+section.primeira-coluna {
+    width: 40vw;
+    height: 100vh;
+    background-image: url(../assets/images/imagem-tela-login.jpg);
+    background-size: cover;
+    position: absolute;
+    left: 0;
+}
+
+section.segunda-coluna {
+    width: 60vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5DC;
+}
+
+#form-recados {
+    margin-left: 30px;
+}
+
+p {
+    font-size: small;
+    color: #1C1C1C;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+/*.posicionamento {
+    text-align: center;
+}
+
+
+input.input-login {
+    width: 250px;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+input.input-cadastro {
+    width: 500px;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+button {
+    display: block;
+    font-size: 15px;
+    width: 504px;
+    height: 40px;
+    margin-bottom: 30px;
+    border-color: #7d7;
+    background-color: #7d7;
+    color: #006400;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.button-cadastro{
+    margin-top: 50px;
+}
+
+button.button-login{
+    margin-top: 25px;
+}
+
+button:hover {
+    color: white;
+}
+
+#button-salvar {
+    font-size: 15px;
+    color: white;
+    background-color:#3CB371;
+    border-color: #3CB371;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+*/
+#button-atualizar {
+   /* font-size: 15px;
+    color: white;
+    background-color: #4169e1;
+    border-color: #4169e1;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;*/
+    display: none;
+}/*
+*/
+#button-cancelar {
+    /*font-size: 15px;
+    color: white;
+    background-color: red;
+    border-color: red;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;*/
+    display: none;
+}/*
+
+#button-salvar:hover {
+    background-color: #90EE90;
+    border-color: #90EE90;
+}
+
+.button-editar {
+    display:inline;
+    /*font-size: 10x;
+    color: white;
+    background-color: #4169e1;
+    border: none;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.button-editar:hover {
+    background-color: white;
+    color: #4169e1;
+}
+
+.button-apagar {
+    display: inline;
+    font-size: 15px;
+    color: white;
+    background-color: red;
+    border: none;
+    width: 80px;
+    height: 30px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/*
+.button-apagar:hover {
+    background-color: white;
+    color: red;
+}
+/*
+#sair {
+    font-size: 15px;
+    color: white;
+    background-color: #FF6347;
+    border: none;
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    right: 30px;
+    margin-top: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.titulo {
+    font-size: 30px;
+    color: #1C1C1C;
+}
+*/
+.titulo-home {
+    /*margin-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;*/
+    color: #1C1C1C;
+}
+
+.posicionamento-home {
+    /*margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 0%;
+    margin-bottom: 50px;
+    font-size: 15px;*/
+    color: #1C1C1C;
+}
+/*
+.input-id {
+    margin-top: 30px;
+    width: 70px;
+    height: 30px;
+}
+
+.input-descricao {
+    margin-top: 30px;
+    width: 400px;
+    height: 30px;
+}
+
+.input-detalhamento {
+    width: 600px;
+    height: 30px;
+}
+*/
+.criar-conta {
+    color: #1C1C1C;
+    font-weight: bold;
+}
+
+.criar-conta:hover {
+    color: white;
+}
+/*
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 50px;
+}
+  */
+th, td {
+    /*padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #DDD;*/
+    color: #1C1C1C;
+}
+  /*
+tr:hover {
+    background-color: #D6EEEE;
+}*/
+
