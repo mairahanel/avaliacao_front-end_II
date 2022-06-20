@@ -1,6 +1,7 @@
 "use strict";
 //LOGIN
-document.querySelector('#logar').addEventListener('click', (e) => {
+let fazerLogin = document.querySelector('#logar');
+fazerLogin.addEventListener('click', (e) => {
     e.preventDefault();
     logar();
 });
@@ -8,7 +9,7 @@ function logar() {
     let login = document.querySelector('#input-email-login');
     let senha = document.querySelector('#input-senha-login');
     let usuarios = [];
-    usuarios = JSON.parse(localStorage.getItem("usuarios"));
+    usuarios = JSON.parse(localStorage.getItem("usuarios") || 'null');
     let usuarioValidar = {
         email: "",
         senha: ""

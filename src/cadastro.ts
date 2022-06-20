@@ -30,9 +30,9 @@ formCadastro.addEventListener('submit', (e) => {
     }});
 
 
-function inserirUsuario(usuario){
+function inserirUsuario(usuario: any){
     
-    const banco_usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const banco_usuarios = JSON.parse(localStorage.getItem('usuarios') || 'null') || [];
     
     banco_usuarios.push(usuario) 
 

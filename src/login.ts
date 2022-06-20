@@ -1,6 +1,6 @@
 //LOGIN
-
-document.querySelector('#logar').addEventListener('click', (e) =>{
+let fazerLogin = document.querySelector('#logar') as HTMLButtonElement;
+fazerLogin.addEventListener('click', (e) => {
     e.preventDefault();
 
     logar();
@@ -13,14 +13,14 @@ function logar(){
 
     let usuarios = [];
 
-    usuarios = JSON.parse(localStorage.getItem("usuarios"));
+    usuarios = JSON.parse(localStorage.getItem("usuarios") || 'null');
 
     let usuarioValidar = {
         email: "",
         senha: ""
     }
 
-    usuarios.forEach((elemento) => {
+    usuarios.forEach((elemento: any) => {
         if(elemento.login === login.value && elemento.senha === senha.value){
             usuarioValidar = {
                 email: elemento.login,

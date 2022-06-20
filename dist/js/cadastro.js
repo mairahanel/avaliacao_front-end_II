@@ -28,7 +28,7 @@ formCadastro.addEventListener('submit', (e) => {
     }
 });
 function inserirUsuario(usuario) {
-    const banco_usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const banco_usuarios = JSON.parse(localStorage.getItem('usuarios') || 'null') || [];
     banco_usuarios.push(usuario);
     localStorage.setItem('usuarios', JSON.stringify(banco_usuarios));
 }

@@ -15,7 +15,7 @@ formulario.addEventListener('submit', (e) => {
 document.addEventListener('DOMContentLoaded', pegarDadosStorage);
 botaoCancelar.addEventListener('click', cancelarEdicao);
 function salvar() {
-    let listaRecados = JSON.parse(localStorage.getItem('meus_recados')) || [];
+    let listaRecados = JSON.parse(localStorage.getItem('meus_recados') || 'null') || [];
     let registroId = inputId.value;
     let existe = listaRecados.some((recado) => recado.registroId == registroId);
     if (existe) {
@@ -71,7 +71,7 @@ function limparCamposHome() {
     inputDetalhamento.value = "";
 }
 function pegarDadosStorage() {
-    let dadosStorage = JSON.parse(localStorage.getItem('meus_recados'));
+    let dadosStorage = JSON.parse(localStorage.getItem('meus_recados') || 'null');
     if (dadosStorage) {
         for (let recado of dadosStorage) {
             salvarNaTabela(recado);
@@ -96,14 +96,13 @@ function atualizarRecado(registroId) {
         descricao: novaDescricao,
         detalhamento: novoDetalhamento
     };
-    let listaRecados = JSON.parse(localStorage.getItem('meus_recados'));
+    let listaRecados = JSON.parse(localStorage.getItem('meus_recados') || 'null');
     let indiceEncontrado = listaRecados.findIndex((recado) => recado.registroId == registroId);
     listaRecados[indiceEncontrado] = recadoAtualizado;
     let linhasTabela = document.querySelectorAll('.registros');
     for (let linha of linhasTabela) {
         if (linha.id == registroId) {
             let colunas = linha.children;
-            console.log(colunas);
             colunas[0].innerText = recadoAtualizado.registroId;
             colunas[1].innerText = recadoAtualizado.descricao;
             colunas[2].innerText = recadoAtualizado.detalhamento;
@@ -118,7 +117,7 @@ function prepararEdicao(registroId) {
     botaoAtualizar.setAttribute('onclick', `atualizarRecado(${registroId})`);
     botaoAtualizar.setAttribute('style', 'display: inline-block');
     botaoCancelar.setAttribute('style', 'display: inline-block');
-    let listaRecados = JSON.parse(localStorage.getItem('meus_recados'));
+    let listaRecados = JSON.parse(localStorage.getItem('meus_recados') || 'null');
     let recadoEncontrado = listaRecados.find((recado) => recado.registroId == registroId);
     inputId.value = recadoEncontrado.registroId;
     inputDescricao.value = recadoEncontrado.descricao;
@@ -126,9 +125,8 @@ function prepararEdicao(registroId) {
     inputId.setAttribute('readonly', 'true');
 }
 function apagarRecado(registroId) {
-    let listaRecados = JSON.parse(localStorage.getItem('meus_recados'));
+    let listaRecados = JSON.parse(localStorage.getItem('meus_recados') || 'null');
     let indiceEncontrado = listaRecados.findIndex((recado) => recado.registroId == registroId);
-    console.log(`Encontrei na posição ${indiceEncontrado}`);
     let confirma = window.confirm(`Tem certeza que deseja remover o recado ${registroId}?`);
     if (confirma) {
         let linhasTabela = document.querySelectorAll('.registros');
@@ -149,7 +147,8 @@ function apagarRecado(registroId) {
 }
 //VERIFICANDO SE A PESSOA ESTÁ LOGADA
 let sessao = sessionStorage.getItem('logado');
-document.querySelector('#sair').addEventListener('click', () => {
+let logout = document.querySelector('#sair');
+logout.addEventListener('click', () => {
     sair();
 });
 function sair() {
